@@ -9,7 +9,6 @@ import (
 	"os"
 	"strings"
 	"time"
-	"fmt"
 
 	"go.mau.fi/whatsmeow"
 	waProto "go.mau.fi/whatsmeow/binary/proto"
@@ -145,9 +144,8 @@ func sendSpoofedReplyLocation(chatID types.JID, fromID types.JID, msgID string, 
 	}
 }
 
-func sleeptime() {
+func sleep() {
 	time.Sleep(30 * time.Second)
-	fmt.Println("DELAY: 30 SEGUNDOS COMPLETADO") 
 	}
 
 func sendSpoofedTalkDemo(chatJID types.JID, spoofedJID types.JID, toGender string, language string, spoofedFile string) {
